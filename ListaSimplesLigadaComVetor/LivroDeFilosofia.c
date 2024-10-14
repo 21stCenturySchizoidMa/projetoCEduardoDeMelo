@@ -39,30 +39,30 @@ void listarElementos(Lista*);
 int main() {
     Lista *lista = criarLista();
 
-    // Criando alguns livros
+
     Livro livro1 = {1, "Júlio Verne", "A Jornada ao Centro da Terra", 1864, 360, "Editora Globo", 15, 89.90, "3ª Edição", "Um dos maiores clássicos da literatura de aventura, com uma viagem épica ao interior da Terra.", 'S'};
     Livro livro2 = {2, "H. G. Wells", "A Máquina do Tempo", 1895, 288, "Companhia das Letras", 8, 74.50, "2ª Edição", "Obra visionária que apresenta um dos primeiros relatos de viagem no tempo.", 'S'};
 
-    // Inserindo livros na lista
+
     inserirElementoInicio(lista, livro1);
     inserirElementoID(lista, livro2, 1);
 
-    // Listando livros
+
     printf("Livros na lista:\n");
     listarElementos(lista);
 
-    // Criando e inserindo mais um livro
+
     Livro livro3 = {3, "George Orwell", "1984", 1949, 328, "Companhia das Letras", 20, 59.90, "1ª Edição", "Uma distopia clássica que explora temas de vigilância, totalitarismo e controle social.", 'S'};
     inserirElemento(lista, livro3);
 
-    // Listando livros novamente
+
     printf("\nApós adicionar mais um livro:\n");
     listarElementos(lista);
 
-    // Salvando os dados em um arquivo
+
     salvarDados(lista, "Livros.txt");
 
-    // Excluindo a lista
+
     excluirLista(lista);
 
     return 0;
